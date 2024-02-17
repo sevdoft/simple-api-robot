@@ -1,8 +1,10 @@
 *** Settings ***
 Library           RequestsLibrary
 
-*** Keywords ***
+*** Variables ***
 ${BASE_URL}   http://localhost:7777
+
+*** Keywords ***
 
 Get Plus
     [Arguments]    ${num1}    ${num2}
