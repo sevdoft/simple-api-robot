@@ -2,16 +2,12 @@
 Library           RequestsLibrary
 
 *** Keywords ***
-${BASE_URL}   http://127.0.0.1:7777
+${BASE_URL}   http://localhost:7777
 
 Get Plus
     [Arguments]    ${num1}    ${num2}
     ${response}=     GET    ${BASE_URL}/plus/${num1}/${num2}
-
-    # Verify the status code is 200 (OK)
     Should Be Equal    ${resp.status_code}    ${200}
-
-    # Get the response content as a JSON object
     [return]    ${response.content}
 
 *** Test Cases ***
